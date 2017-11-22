@@ -4,7 +4,7 @@ import textwrap
 
 
 def main():
-    conn = socket.socket(socket.AF_PACKET, socket.SOCK_RAW, socket.nthos(3))
+    conn = socket.socket(socket.AF_PACKET, socket.SOCK_RAW, socket.ntohs(3))
 
     while True:
         raw_data, addr = conn.recvfrom(65536)
